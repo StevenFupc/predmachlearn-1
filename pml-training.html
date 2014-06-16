@@ -361,18 +361,14 @@ pmlConfusionMatrix
 ## Balanced Accuracy       0.997    0.984    0.992    0.992    0.992
 </code></pre>
 
-<p>We can thus conclude that the out-of-sample accuracy will be 
-0.987. </p>
-
 <h3>Out-of-sample error</h3>
 
 <p>The out-of-sample error, as determined by validating the model against a labeled testing partition originally withheld from the training data, is the following value:</p>
 
-<pre><code class="r">1 - pmlConfusionMatrix$overall[&quot;Accuracy&quot;]
+<pre><code class="r">(1 - pmlConfusionMatrix$overall[&quot;Accuracy&quot;])[[1]]
 </code></pre>
 
-<pre><code>## Accuracy 
-##    0.013
+<pre><code>## [1] 0.013
 </code></pre>
 
 <h1>Determining the answers for the unlabeled data</h1>

@@ -86,15 +86,12 @@ pmlConfusionMatrix <- confusionMatrix(pmlTestingLabelsPred, pmlTesting$classe)
 pmlConfusionMatrix
 ```
 
-We can thus conclude that the out-of-sample accuracy will be 
-`r pmlConfusionMatrix$overall['Accuracy']`. 
-
 ### Out-of-sample error
 
 The out-of-sample error, as determined by validating the model against a labeled testing partition originally withheld from the training data, is the following value:
 
 ```{r}
-1 - pmlConfusionMatrix$overall['Accuracy']
+(1 - pmlConfusionMatrix$overall['Accuracy'])[[1]]
 ```
 
 # Determining the answers for the unlabeled data
